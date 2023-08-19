@@ -1,0 +1,145 @@
+ nav {
+   background-color: #edd9d9;
+   color: rgb(22, 19, 19);
+   padding: 10px 0;
+ }
+
+ nav ul {
+   display: flex;
+   list-style: none;
+   padding: 0;
+   color: aqua;
+ }
+
+ nav li {
+   /* margin-left: -200px; */
+ }
+
+ nav a {
+   color: rgb(140, 45, 45);
+   text-decoration: none;
+ }
+
+ .active {
+   font-weight: bold;
+ }
+
+ /* Add hover effect with cursor change and jump animation */
+ nav li {
+   margin-right: 20px;
+   transition: transform 0.3s ease, background-color 0.3s ease;
+ }
+
+ nav li:hover {
+   background-color: rgba(255, 255, 255, 0.9);
+   /* Change color as needed */
+   transform: translateY(-5px);
+   /* Move tab up by 5px on hover */
+   cursor: pointer;
+   text-decoration: solid;
+   color: rgb(40, 207, 222);
+   /* Change cursor to pointer */
+ }
+
+ /* Add click effect */
+ nav li:active {
+   background-color: rgba(255, 255, 255, 0.3);
+   /* Change color as needed */
+ }
+
+ /* Add styles for the menu icon */
+ .menu-icon {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+   margin-right: 20px;
+ }
+
+ .menu-icon span {
+   display: block;
+   width: 30px;
+   height: 3px;
+   background-color: white;
+   margin: 4px 0;
+   transition: transform 0.3s ease, background-color 0.3s ease;
+ }
+
+ .menu-icon.open span:nth-child(1) {
+   transform: translateY(8px) rotate(45deg);
+ }
+
+ .menu-icon.open span:nth-child(2) {
+   transform: scaleX(0);
+ }
+
+ .menu-icon.open span:nth-child(3) {
+   transform: translateY(-8px) rotate(-45deg);
+ }
+
+
+
+ /* Add responsive styles for small screens */
+
+
+ @media (max-width: 768px) {
+   nav {
+     background-color: #333;
+     color: white;
+     padding: 5px 0;
+     /* Reduce the top and bottom padding */
+   }
+
+   nav ul {
+     display: flex;
+     list-style: none;
+     padding: 0;
+     margin-left: 0;
+     /* Reset margin for smaller screens */
+   }
+
+   nav li {
+     margin-right: 10px;
+     /* Reduce the margin for smaller screens */
+   }
+
+   nav a {
+     color: white;
+     text-decoration: none;
+     font-size: 14px;
+     /* Reduce font size for smaller screens */
+   }
+
+   /* ... Other styles ... */
+
+
+   .menu {
+     display: none;
+     /* Hide the menu */
+     flex-direction: column;
+     align-items: center;
+     position: absolute;
+     top: 100%;
+     /* Position it below the header */
+     left: 0;
+     width: 100%;
+     background-color: #333;
+     color: white;
+     z-index: 1;
+     /* Ensure it's on top of other content */
+     text-align: center;
+     padding: 10px 0;
+   }
+
+   .header.menu-open .menu {
+     display: flex;
+     /* Show the menu when menu is open */
+   }
+
+   .menu-icon {
+     display: none;
+     cursor: pointer;
+     margin-right: 20px;
+     color: white;
+   }
+
+ }

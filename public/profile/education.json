@@ -1,0 +1,14 @@
+{
+    "education": [
+        {
+            "title": "Jun 2018 - Jun 2022",
+            "cardTitle": "B.Tech, Electronics and Communication Engineering",
+            "cardSubtitle": "Madan Mohan Malaviya University of Technology, Gorakhpur",
+            "cardDetailedText": "CGPA - 7.1",
+            "status": "Completed",
+            "icon": {
+                "src": "images/ui1.jpg"
+            }
+        }
+    ]
+}
