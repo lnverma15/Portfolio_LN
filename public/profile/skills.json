@@ -10,9 +10,24 @@
                     "rating": 8
                 },
                 {
+                    "icon": "images/skills/c-plus-plus.svg",
+                    "title": "C++",
+                    "rating": 4
+                },
+                {
+                    "icon": "images/skills/python.png",
+                    "title": "Python",
+                    "rating": 4
+                },
+                {
+                    "icon": "images/skills/mongo-db.png",
+                    "title": "MongoDB",
+                    "rating": 8
+                },
+                {
                     "icon": "images/skills/mysql.png",
                     "title": "MySQL",
-                    "rating": 8
+                    "rating": 4
                 }
             ]
         },
@@ -20,19 +35,24 @@
             "title": "Frameworks & Technologies",
             "items": [
                 {
-                    "icon": "images/skills/android_new.png",
-                    "title": "Android",
-                    "rating": 6
-                },
-                {
                     "icon": "images/skills/react.png",
                     "title": "React",
-                    "rating": 4
+                    "rating": 10
+                },
+                {
+                    "icon": "images/skills/react-native.png",
+                    "title": "React Native",
+                    "rating": 8
                 },
                 {
                     "icon": "images/skills/nodejs.png",
                     "title": "Nodejs",
-                    "rating": 10
+                    "rating": 8
+                },
+                {
+                    "icon": "images/skills/android_new.png",
+                    "title": "Android",
+                    "rating": 4
                 }
             ]
         },
@@ -42,7 +62,12 @@
                 {
                     "icon": "images/skills/android-studio.png",
                     "title": "Android Studio",
-                    "rating": 4
+                    "rating": 6
+                },
+                {
+                    "icon": "images/skills/xd.png",
+                    "title": "Adobe XD",
+                    "rating": 10
                 },
                 {
                     "icon": "images/skills/git.png",
@@ -52,7 +77,7 @@
                 {
                     "icon": "images/skills/docker.png",
                     "title": "Docker",
-                    "rating": 6
+                    "rating": 4
                 }
             ]
         }

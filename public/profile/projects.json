@@ -1,9 +1,9 @@
 {
     "projects": [
         {
-            "image": "images/projects/portfolio-poster.png",
+            "image": "images/projects/pp.avif",
             "title": "Dev Portfolio",
-            "bodyText": "- Developer Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.\n - Dark Mode Support",
+            "bodyText": "- Developer Portfolio Website made in React\n -  Fully customisable and dynamic, easily change data and images.",
             "links": [
                 {
                     "text": "GitHub",
@@ -18,6 +18,39 @@
                 "React",
                 "Portfolio",
                 "JavaScript"
+            ]
+        },
+        {
+            "image": "images/projects/Od.jpeg",
+            "title": "Object Detection Using OpenCV ",
+            "bodyText": "- 🕵️‍♂️ Unveiling Mysteries with OpenCV and Python: Object Detection Adventure!\n - 🔍 Prepare to embark on a digital expedition where pixels reveal secrets and algorithms uncover hidden truths.",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/lnverma15/Object-_Detection_Using_OpenCV"
+                }
+            ],
+            "tags": [
+                "OpenCV",
+                "Python",
+                "Object Detection"
+            ]
+        },
+        {
+            "image": "images/projects/cc.jpg",
+            "title": "Control computers by hand gesture",
+            "bodyText": "- 🌟 Unleash Your Inner Magician: DIY Gesture-Controlled Laptop! ✨ Picture this: You're waving your hand gracefully and like a digital maestro \n - your laptop obeys your every command. Behold, the future is here!",
+            "links": [
+                {
+                    "text": "GitHub",
+                    "href": "https://github.com/lnverma15/Control-computers-by-hand-gesture"
+                }
+            ],
+            "tags": [
+                "Python",
+                "PyautoGUI",
+                "Arduino",
+                "C++"
             ]
         }
     ]

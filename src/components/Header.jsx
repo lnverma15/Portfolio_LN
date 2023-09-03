@@ -54,6 +54,7 @@ const Header = ({ activeTab, setActiveTab }) => {
   const [isOnline, setIsOnline] = useState(window.navigator.onLine);
   const [darkMode, setDarkMode] = useState(true);
 
+
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
   };

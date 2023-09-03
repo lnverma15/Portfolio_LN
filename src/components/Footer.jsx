@@ -62,6 +62,7 @@ const Marker = () => (
 
 const Footer = () => {
 
+
     return (
         <>
             {/* <Container> */}
@@ -106,36 +107,53 @@ const Footer = () => {
                         </Container>
                     </Col>
 
-                    {/* <Col md={6} lg={3} >
+
+
+
+
+                    {/* <Col md={6} lg={3} className="mt-5 mt-md-0">
                         <Container style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                             <div style={{ color: 'white' }}>
-                                <b>
-                                    Quick Links
-                                </b>
+                                <b>Quick Links</b>
                             </div>
                             <br />
                             <div>
-                                <Link style={{ ...linkStyle }} to="/" className="footer-link">
+                                <Link style={{ ...linkStyle }} to="/" className="footer-link"
+
+                                >
                                     Home
                                 </Link>
                             </div>
                             <div>
-                                <Link style={{ ...linkStyle }} to="/about" className="footer-link">
+                                <Link style={{ ...linkStyle }} to="/about" className="footer-link"
+
+                                >
                                     About
                                 </Link>
                             </div>
                             <div>
-                                <Link style={{ ...linkStyle }} to="/skills" className="footer-link">
+                                <Link style={{ ...linkStyle }} to="/skills" className="footer-link"
+
+
+
+                                >
                                     Skills
                                 </Link>
                             </div>
                             <div>
-                                <Link style={{ ...linkStyle }} to="/experience" className="footer-link">
+                                <Link style={{ ...linkStyle }} to="/experience" className="footer-link"
+
+
+                                >
                                     Experience
                                 </Link>
                             </div>
                             <div>
-                                <Link style={{ ...linkStyle }} to="/education" className="footer-link">
+                                <Link style={{ ...linkStyle }} to="/education" className="footer-link"
+                                // activeClassName="active"
+                                // onClick={() => handleTabClick('home')}
+
+                                >
                                     Education
                                 </Link>
                             </div>
@@ -145,39 +163,6 @@ const Footer = () => {
 
 
 
-                    <Col md={6} lg={3} className="mt-5 mt-md-0">
-                        <Container style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <div style={{ color: 'white' }}>
-                                <b>Quick Links</b>
-                            </div>
-                            <br />
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/" className="footer-link">
-                                    Home
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/about" className="footer-link">
-                                    About
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/skills" className="footer-link">
-                                    Skills
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/experience" className="footer-link">
-                                    Experience
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/education" className="footer-link">
-                                    Education
-                                </Link>
-                            </div>
-                        </Container>
-                    </Col>
 
 
                     <Col md={6} lg={3} className="mt-5 mt-md-0">
@@ -219,5 +204,11 @@ const Footer = () => {
         </>
     );
 };
+
+
+
+
+
+
 
 export default Footer;

@@ -50,14 +50,14 @@ const Projects = (props) => {
           ))}
         </Row>
 
-        {!showMore && (
+        {/* {!showMore && (
           <Button
             style={{ ...styles.showMoreStyle, backgroundColor: cardBackground }}
             onClick={() => setShowMore(true)}
           >
             Show more
           </Button>
-        )}
+        )} */}
       </Container>
 
     </div>

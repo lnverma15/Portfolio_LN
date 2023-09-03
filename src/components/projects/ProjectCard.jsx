@@ -23,6 +23,7 @@ const styles = {
   },
   cardTextStyle: {
     textAlign: 'left',
+    color: 'black'
   },
   linkStyle: {
     textDecoration: 'none',
