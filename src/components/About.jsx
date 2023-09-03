@@ -70,7 +70,7 @@ function About(props) {
         </Container>
       </div>
       <br />
-      <hr />
+      {/* <hr /> */}
       {/* <Footer title={Footer} /> */}
     </>
   );

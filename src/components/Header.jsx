@@ -26,7 +26,11 @@ const ExternalNavLink = styled.a`
   }
 `;
 
-const InternalNavLink = styled(Nav.Link)` /* Use styled(Nav.Link) here */
+
+
+
+
+const InternalNavLink = styled(Nav.Link)`
   color: ${(props) => props.theme.navbarTheme.linkColor};
   &:hover {
     color: ${(props) => props.theme.navbarTheme.linkHoverColor};
@@ -35,8 +39,11 @@ const InternalNavLink = styled(Nav.Link)` /* Use styled(Nav.Link) here */
     background-color: ${(props) => props.theme.accentColor};
   }
   &.active {
-    color: ${(props) => props.theme.navbarTheme.linkActiveColor}; /* Use .active here */
+    color: ${(props) => props.theme.navbarTheme.linkActiveColor};
   }
+
+  /* Add margin or padding here */
+  margin-right: 30px; /* Adjust the value as needed */
 `;
 
 
@@ -107,6 +114,7 @@ const Header = ({ activeTab, setActiveTab }) => {
               >
                 Home
               </InternalNavLink>
+
               <InternalNavLink
                 as={NavLink}
                 to="/about"
@@ -158,11 +166,11 @@ const Header = ({ activeTab, setActiveTab }) => {
               {/* Add similar NavLink components for other sections */}
             </Nav>
 
-            <ThemeToggler
+            {/* <ThemeToggler
               onClick={handleMenuToggle}
               toggleDarkMode={toggleDarkMode}
               darkModeValue={darkMode}
-            />
+            /> */}
           </Navbar.Collapse>
         </Container>
       </Navbar>

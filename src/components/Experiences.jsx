@@ -26,6 +26,13 @@ function Experiences(props) {
     <>
       {/* Render the header */}
       {/* <Header title={header} /> */}
+      <br /><br />
+      <center>
+        <h3>
+          Experiance
+        </h3>
+      </center>
+      <br /><br />
 
       <div className="section-content-container">
         {data ? (
@@ -34,7 +41,7 @@ function Experiences(props) {
               <Col key={experience.title} xs={12} md={6} lg={11}>
                 <Card className="card-styles">
                   <div className="card-image">
-                    <Image src="images/ui1.jpg" alt="Website Logo" fluid className="img-style" />
+                    <Image src="images/ui2.jpg" alt="Website Logo" fluid className="img-style" />
                   </div>
                   <div className="card-text">
                     <Card.Title className="card-title-styles">{experience.title}</Card.Title>

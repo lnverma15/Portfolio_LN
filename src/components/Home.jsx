@@ -1,7 +1,8 @@
 
 import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Form, Button, Carousel } from 'react-bootstrap';
+
 import Typewriter from 'typewriter-effect';
-import { Row, Col, Container } from 'react-bootstrap';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
@@ -44,6 +45,10 @@ const styles = {
   },
 };
 
+
+
+
+
 function Home() {
   const [data, setData] = useState(null);
 
@@ -55,6 +60,18 @@ function Home() {
       .then((res) => setData(res))
       .catch((err) => err);
   }, []);
+
+
+
+  const images = [
+    'images/fox family-pana.svg',
+    'images/avocado tree-cuate.svg',
+    'images/cherry blossom-bro.svg',
+    'images/cherry tree-amico.svg',
+    'images/cherry tree-cuate.svg',
+    'images/cherry tree-rafiki.svg',
+
+  ];
 
   return (
     <div style={styles.container}>
@@ -114,13 +131,21 @@ function Home() {
                     </div>
                   </Row>
                 </Col>
-                <Col md={6} lg={6}>
-                  <img
+                <Col md={6} lg={6} className="image-col">
+                  {/* <img
                     src="images/fox family-pana.svg"
                     // src="images/home.jpg"
                     alt="Website Logo"
                     style={styles.imageStyle}
-                  />
+                  /> */}
+
+                  <Carousel className="contact-carousel">
+                    {images.map((image, index) => (
+                      <Carousel.Item key={index}>
+                        <img src={image} alt={`Carousel ${index}`} className="contact-image" />
+                      </Carousel.Item>
+                    ))}
+                  </Carousel>
 
 
 

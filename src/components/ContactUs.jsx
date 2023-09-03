@@ -23,11 +23,11 @@ const ContactUs = () => {
 
   const images = [
     'images/fox family-pana.svg',
-    'images/avocado tree-cuate.svg',
-    'images/cherry blossom-bro.svg',
-    'images/cherry tree-amico.svg',
-    'images/cherry tree-cuate.svg',
-    'images/cherry tree-rafiki.svg',
+    // 'images/avocado tree-cuate.svg',
+    // 'images/cherry blossom-bro.svg',
+    // 'images/cherry tree-amico.svg',
+    // 'images/cherry tree-cuate.svg',
+    // 'images/cherry tree-rafiki.svg',
 
   ];
 
@@ -159,6 +159,7 @@ const ContactUs = () => {
       </Container>
       <br />
       {/* <Footer /> */}
+      <br /><br /><br />
     </>
   );
 };

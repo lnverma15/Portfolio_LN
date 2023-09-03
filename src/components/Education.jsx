@@ -26,6 +26,13 @@ function Education(props) {
     <>
       {/* Render the header */}
       {/* <Header title={header} /> */}
+      <br /><br /><br /><br />
+      <center>
+
+        <h3>
+          Education
+        </h3>
+      </center>
 
       <div className="section-content-container">
         {data ? (
@@ -55,6 +62,8 @@ function Education(props) {
       </div>
 
       {/* <Footer /> */}
+      <br />
+      <br />
     </>
   );
 }
