@@ -1,9 +1,7 @@
 
-
-import React, { useContext } from 'react';
+import React from 'react';
 import { Button, Card, Badge, Col } from 'react-bootstrap';
 import PropTypes from 'prop-types';
-import { ThemeContext } from 'styled-components';
 import ReactMarkdown from 'react-markdown';
 
 const styles = {
@@ -13,9 +11,12 @@ const styles = {
     paddingTop: 5,
     paddingBottom: 5,
     margin: 5,
+    // backgroundColor: 'grey'
   },
   cardStyle: {
     borderRadius: 10,
+    // backgroundColor: 'white', // Replace with your color
+    // borderColor: 'your-custom-card-border-color', // Replace with your color
   },
   cardTitleStyle: {
     fontSize: 24,
@@ -23,33 +24,29 @@ const styles = {
   },
   cardTextStyle: {
     textAlign: 'left',
-    color: 'black'
+    color: 'black', // Replace with your text color
   },
   linkStyle: {
-    textDecoration: 'none',
+    textDecoration: 'black',
     padding: 10,
   },
   buttonStyle: {
     margin: 5,
   },
+  cardFooterStyle: {
+    backgroundColor: 'black'
+  },
 };
 
 const ProjectCard = ({ project }) => {
-  const {
-    cardBackground, cardBorderColor, bsSecondaryVariant, bsPrimaryVariant,
-    cardFooterBackground,
-  } = useContext(ThemeContext);
   const parseBodyText = (text) => <ReactMarkdown children={text} />;
 
   return (
-    <Col>
+    <Col >
       <Card
-        style={{
-          ...styles.cardStyle,
-          backgroundColor: cardBackground,
-          borderColor: cardBorderColor,
-        }}
-        text={bsSecondaryVariant}
+        style={styles.cardStyle}
+        text="black" // Replace with your text color
+
       >
         <Card.Img variant="top" src={project?.image} style={{ width: '100%', height: 'auto' }} />
         <Card.Body>
@@ -64,7 +61,7 @@ const ProjectCard = ({ project }) => {
             <Button
               key={link.href}
               style={styles.buttonStyle}
-              variant={'outline-' + bsSecondaryVariant}
+              variant="outline-secondary" // Customize the button variant as needed
               onClick={() => window.open(link.href, '_blank')}
             >
               {link.text}
@@ -72,13 +69,12 @@ const ProjectCard = ({ project }) => {
           ))}
         </Card.Body>
         {project.tags && (
-          <Card.Footer style={{ backgroundColor: cardFooterBackground }}>
+          <Card.Footer style={styles.cardFooterStyle}>
             {project.tags.map((tag) => (
               <Badge
                 key={tag}
                 pill
-                bg={bsSecondaryVariant}
-                text={bsPrimaryVariant}
+                variant="primary" // Customize the badge variant as needed
                 style={styles.badgeStyle}
               >
                 {tag}

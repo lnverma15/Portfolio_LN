@@ -1,8 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { ToastContainer, toast } from 'react-toastify';
-import { IoIosMenu } from 'react-icons/io';
 import 'react-toastify/dist/ReactToastify.css';
 import styled from 'styled-components';
 import { Navbar, Nav, Container } from 'react-bootstrap';
@@ -17,47 +15,57 @@ const styles = {
 };
 
 const ExternalNavLink = styled.a`
-  color: ${(props) => props.theme.navbarTheme.linkColor};
+  /* Custom link color */
+  color: #dedede; /* Replace with your desired link color */
   &:hover {
-    color: ${(props) => props.theme.navbarTheme.linkHoverColor};
+    /* Custom link hover color */
+    color: #fefefe; /* Replace with your desired hover color */
   }
   &::after {
-    background-color: ${(props) => props.theme.accentColor};
+    /* Custom background color */
+    background-color: #e67e22; /* Replace with your desired background color */
   }
 `;
 
-
-
-
-
 const InternalNavLink = styled(Nav.Link)`
-  color: ${(props) => props.theme.navbarTheme.linkColor};
+  /* Custom link color */
+  color: #dedede; /* Replace with your desired link color */
   &:hover {
-    color: ${(props) => props.theme.navbarTheme.linkHoverColor};
+    /* Custom link hover color */
+    color: #00d4ff;
+    /* color: rgb(2,0,36);
+background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(121,9,23,1) 35%, rgba(0,212,255,1) 100%);; Replace with your desired hover color */
   }
   &::after {
-    background-color: ${(props) => props.theme.accentColor};
+    /* Custom background color */
+    background-color: #e67e22; /* Replace with your desired background color */
   }
   &.active {
-    color: ${(props) => props.theme.navbarTheme.linkActiveColor};
+    /* Custom active link color */
+    color: #6fdff6;
+    
   }
 
   /* Add margin or padding here */
   margin-right: 30px; /* Adjust the value as needed */
 `;
 
-
-
-
 const Header = ({ activeTab, setActiveTab }) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isOnline, setIsOnline] = useState(window.navigator.onLine);
-  const [darkMode, setDarkMode] = useState(true);
+  // const [darkMode, setDarkMode] = useState(true);
 
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
+  const handleMenuToggle = () => {
+    setIsMenuOpen(!isMenuOpen);
   };
+
+  const handleTabClick = (tab) => {
+    setActiveTab(tab);
+    const element = document.getElementById(tab);
+    element.scrollIntoView({ behavior: 'smooth' });
+  };
+
+
 
   useEffect(() => {
     // Add event listeners to track network changes
@@ -76,17 +84,6 @@ const Header = ({ activeTab, setActiveTab }) => {
     const statusMessage = window.navigator.onLine ? 'Online' : 'Offline';
     toast.info(`You are now ${statusMessage}`);
   };
-
-  const handleMenuToggle = () => {
-    setIsMenuOpen(!isMenuOpen);
-  };
-
-  const handleTabClick = (tab) => {
-    setActiveTab(tab);
-    const element = document.getElementById(tab);
-    element.scrollIntoView({ behavior: 'smooth' });
-  };
-
   return (
     <div className={`header ${isMenuOpen ? 'menu-open' : ''}`}>
       <ToastContainer style={{ marginTop: '30px' }} position="top-center" />
@@ -185,7 +182,3 @@ Header.propTypes = {
 };
 
 export default Header;
-
-
-
-

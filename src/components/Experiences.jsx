@@ -1,12 +1,8 @@
-
-
 import React, { useEffect, useState } from 'react';
 import { Card, Row, Col, Image } from 'react-bootstrap';
 import PropTypes from 'prop-types';
 import endpoints from '../constants/endpoints';
-// import Header from './Header';
 import FallbackSpinner from './FallbackSpinner';
-// import Footer from './Footer';
 import '../css/education.css'; // Make sure to include the correct path to your CSS file
 
 function Experiences(props) {

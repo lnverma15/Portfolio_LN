@@ -10,6 +10,7 @@ import FallbackSpinner from './FallbackSpinner';
 const styles = {
   containerStyle: {
     marginBottom: 25,
+    // backgroundColor: 'white'
   },
   showMoreStyle: {
     margin: 25,
@@ -18,7 +19,7 @@ const styles = {
 
 const Projects = (props) => {
   const { header } = props;
-  const { cardBackground } = useContext(ThemeContext); // Use ThemeContext for styling
+  // const { cardBackground } = useContext(ThemeContext); // Use ThemeContext for styling
   const [data, setData] = useState(null);
   const [showMore, setShowMore] = useState(false);
 
@@ -43,7 +44,7 @@ const Projects = (props) => {
       </div>
       <br /><br /><br />
 
-      <Container style={{ ...styles.containerStyle, backgroundColor: cardBackground }}>
+      <Container style={{ ...styles.containerStyle, backgroundColor: 'white' }}>
         <Row xs={1} sm={1} md={2} lg={3} className="g-4">
           {data && data.projects?.slice(0, numberOfItems).map((project) => (
             <ProjectCard key={project.title} project={project} />
