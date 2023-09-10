@@ -37,6 +37,7 @@ function App() {
   const darkMode = useDarkMode(true);
 
   return (
+
     <ThemeProvider theme={darkMode.value ? darkTheme : lightTheme}>
       <GlobalStyles />
       <div className="App">
@@ -47,7 +48,27 @@ function App() {
         </BrowserRouter>
       </div>
     </ThemeProvider>
+
   );
 }
 
 export default App;
+
+
+
+
+
+
+// <>
+
+
+
+// <GlobalStyles />
+// <div className="App">
+//   <BrowserRouter>
+//     {/* <Header /> */}
+//     <MainApp />
+//     <Footer />
+//   </BrowserRouter>
+// </div>
+// </>
