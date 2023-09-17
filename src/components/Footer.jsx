@@ -106,7 +106,7 @@ const Footer = () => {
                             </div>
                             <br />
                             <div style={{ display: 'flex', alignItems: 'center', color: 'white' }}>
-                                <FaMapMarker size={24} style={{ ...iconStyle, marginRight: '25px' }} /> Lucknow U.P. India
+                                <FaMapMarker size={24} style={{ ...iconStyle, marginRight: '25px' }} /> Prayagraj U.P. India
                             </div>
                         </Container>
                     </Col>
