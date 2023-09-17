@@ -24,10 +24,15 @@ const styles = {
     padding: '20px',
   },
   nameStyle: {
-    fontSize: '2em',
+    fontSize: '1.5em',
+    fontStyle: 'italic'
+
   },
   inlineChild: {
     display: 'inline-block',
+    fontSize: '1em',
+    fontStyle: 'italic'
+
   },
   imageStyle: {
     maxWidth: '100%',
@@ -66,10 +71,20 @@ function Home() {
   const images = [
     'images/fox family-pana.svg',
     'images/avocado tree-cuate.svg',
-    'images/cherry blossom-bro.svg',
     'images/cherry tree-amico.svg',
-    'images/cherry tree-cuate.svg',
-    'images/cherry tree-rafiki.svg',
+
+    'images/1.jpg',
+    'images/2.jpg',
+    'images/3.jpg',
+    'images/4.jpg',
+    'images/5.jpg',
+    'images/6.jpg',
+    'images/7.jpg',
+    'images/8.jpg',
+    'images/9.jpg',
+    'images/10.jpg',
+    'images/11.jpg',
+    'images/12.jpg',
 
   ];
 
@@ -80,13 +95,13 @@ function Home() {
           {window.innerWidth < 576 ? (
             // Content for phone screens
             <div style={styles.phoneContent}>
-              <div>
+              {/* <div>
                 <img
                   src="images/home.jpg"
                   alt="Website Logo"
                   style={styles.phoneImageStyle}
                 />
-              </div>
+              </div> */}
               <div>
                 <h1 style={styles.nameStyle}>{data?.greetings}</h1>
                 <h1 style={styles.nameStyle}>{data?.name}</h1>
@@ -112,8 +127,8 @@ function Home() {
                   <Row style={{ marginTop: '130px' }}>
                     <div>
 
-                      <h1 style={styles.nameStyle}>{data?.greetings}</h1>
-                      <h1 style={styles.nameStyle}>{data?.name}</h1>
+                      <h5 style={styles.nameStyle}>{data?.greetings}</h5>
+                      <h2 style={styles.nameStyle}>{data?.name}</h2>
                       <div style={{ flexDirection: 'row' }}>
                         <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
                         <Typewriter

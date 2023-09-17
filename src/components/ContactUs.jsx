@@ -1,24 +1,17 @@
 
-
-
-
-
-
-
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Carousel } from 'react-bootstrap';
-import { BsUpload } from 'react-icons/bs';
 import '../css/ContactUs.css';
 // import Footer from './Footer';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const ContactUs = () => {
   const [fullName, setFullName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
   const [address, setAddress] = useState('');
-  const [resume, setResume] = useState(null);
   const [education, setEducation] = useState('');
-  const [experience, setExperience] = useState('');
   const [error, setError] = useState('');
 
   const images = [
@@ -34,10 +27,13 @@ const ContactUs = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!fullName || !email || !phone || !address || !resume || !education || !experience) {
+
+    if (!fullName || !email || !phone || !address || !education) {
       setError('Please fill in all fields');
       return;
     }
+
+    toast.info(`Message sent Successfully`);
 
     // Perform further actions with the form data
     // e.g., send data to backend, display success message, etc.
@@ -47,15 +43,18 @@ const ContactUs = () => {
     setEmail('');
     setPhone('');
     setAddress('');
-    setResume(null);
     setEducation('');
-    setExperience('');
     setError('');
   };
+
+
+
 
   return (
     <>
       <Container fluid className="contact-container">
+        <ToastContainer style={{ marginTop: '30px' }} position="top-center" />
+
         <Row className="contact-row">
           <Col md={6} className="image-col">
             <Carousel className="contact-carousel">
@@ -108,7 +107,7 @@ const ContactUs = () => {
                       <Form.Label>Address</Form.Label>
                       <Form.Control
                         as="textarea"
-                        rows={3}
+                        rows={2}
                         value={address}
                         onChange={(e) => setAddress(e.target.value)}
                       />
@@ -118,26 +117,16 @@ const ContactUs = () => {
                 <Row>
                   <Col xs={12} md={6}>
                     <Form.Group controlId="education">
-                      <Form.Label>Recent Education</Form.Label>
+                      <Form.Label>Remark</Form.Label>
                       <Form.Control
                         as="textarea"
-                        rows={3}
+                        rows={2}
                         value={education}
                         onChange={(e) => setEducation(e.target.value)}
                       />
                     </Form.Group>
                   </Col>
-                  <Col xs={12} md={6}>
-                    <Form.Group controlId="experience">
-                      <Form.Label>Previous Experience</Form.Label>
-                      <Form.Control
-                        as="textarea"
-                        rows={3}
-                        value={experience}
-                        onChange={(e) => setExperience(e.target.value)}
-                      />
-                    </Form.Group>
-                  </Col>
+
                 </Row>
                 {error && <p className="error-text">{error}</p>}
                 <Row>

@@ -166,9 +166,21 @@ const Header = ({ activeTab, setActiveTab }) => {
 
             {/* <ThemeToggler
               onClick={handleMenuToggle}
-              toggleDarkMode={toggleDarkMode}
-              darkModeValue={darkMode}
+            // toggleDarkMode={toggleDarkMode}
+            // darkModeValue={darkMode}
             /> */}
+
+            <Nav>
+              <img
+                src="/Lnverma.gif"
+                alt="Lnverma Logo"
+                style={{ width: '50px', height: '50px' }} // Adjust the values as needed
+              />
+            </Nav>
+
+
+
+
           </Navbar.Collapse>
         </Container>
       </Navbar>

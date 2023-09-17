@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import { Container, Row, Col } from 'react-bootstrap';
 import endpoints from '../constants/endpoints';
 import FallbackSpinner from './FallbackSpinner';
+import '../css/skills.css';
 
 const styles = {
   cardContainer: {
@@ -22,11 +23,9 @@ const styles = {
     display: 'flex',
     flexDirection: 'column',
     justifyContent: 'space-between',
+    transition: 'transform 0.3s, box-shadow 0.3s, background-color 0.3s',
+    backgroundColor: 'transparent', // Set initial background to transparent
   },
-
-
-
-
   iconStyle: {
     height: 75,
     width: 75,
@@ -74,29 +73,13 @@ function Skills(props) {
     const filledStars = Math.floor(rating / 2);
     const halfStar = rating % 2 === 1;
 
-    // const starColors = ['#FF5733', '#339CFF', '#33FF41', '#FF33EC', '#FFC133']; // Different colors for stars
-    // const starColors = [
-    //   '#339CFF',
-    //   '#2478D3',
-    //   '#1655A6',
-    //   '#0B48A2',
-    //   '#082F6B',
-    // ];
-
-
     const starColors = [
-      'rgba(51, 156, 255, 0.7)',  // Light blue with 70% opacity
-      'rgba(11, 72, 162, 0.7)',   // Dark blue with 70% opacity
-      'rgba(51, 156, 255, 0.5)',  // Light blue with 50% opacity
-      'rgba(11, 72, 162, 0.5)',   // Dark blue with 50% opacity
-      'rgba(51, 156, 255, 0.3)',  // Light blue with 30% opacity
+      'rgba(51, 156, 255, 0.7)',
+      'rgba(11, 72, 162, 0.7)',
+      'rgba(51, 156, 255, 0.5)',
+      'rgba(11, 72, 162, 0.5)',
+      'rgba(51, 156, 255, 0.3)',
     ];
-
-
-
-
-
-
 
     const stars = [];
     for (let i = 0; i < 5; i += 1) {
@@ -135,10 +118,28 @@ function Skills(props) {
   const renderSkillCards = (skills) => (
     <div style={styles.cardContainer}>
       {skills.map((item) => (
-        <div key={item.title} style={styles.card}>
+        <div
+          key={item.title}
+          style={{
+            ...styles.card,
+            transform: item.isHovered ? 'translateY(-10px)' : 'translateY(0)',
+            boxShadow: item.isHovered
+              ? '0 8px 12px rgba(16, 190, 51, 0.1)'
+              : 'none',
+            backgroundColor: item.isHovered ? 'rgba(77, 242, 237, 0.8)' : 'transparent',
+          }}
+          onMouseEnter={() => {
+            item.isHovered = true;
+            setData({ ...data }); // Trigger a re-render to update the styles
+          }}
+          onMouseLeave={() => {
+            item.isHovered = false;
+            setData({ ...data }); // Trigger a re-render to update the styles
+          }}
+        >
           <img style={styles.iconStyle} src={item.icon} alt={item.title} />
           <h5 style={styles.title}>{item.title}</h5>
-          {renderRatingScale(item.rating)} {/* Use the rating from JSON data */}
+          {renderRatingScale(item.rating)}
         </div>
       ))}
     </div>
@@ -150,7 +151,7 @@ function Skills(props) {
       {data ? (
         <div className="section-content-container">
           <Container>
-            {/* {renderSkillsIntro(data.intro)} */}
+            {renderSkillsIntro(data.intro)}
             {data.skills?.map((category) => (
               <div key={category.title}>
                 <br />
@@ -178,5 +179,3 @@ Skills.propTypes = {
 };
 
 export default Skills;
-
-

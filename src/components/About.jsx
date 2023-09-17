@@ -59,10 +59,7 @@ function About(props) {
 
                 {parseIntro(data.about)}
               </Col>
-              <Col style={styles.introImageContainer}>
-                <img src={data?.imageSource} alt="Man_simple" />
-                {/* <img src={data?.imageSource} alt="profile" /> */}
-              </Col>
+
             </Row>
           ) : (
             <FallbackSpinner />

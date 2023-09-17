@@ -6,6 +6,8 @@ import { Row, Col, Container } from 'react-bootstrap';
 import GoogleMapReact from 'google-map-react';
 // import { Link } from 'react-router-dom/cjs/react-router-dom';
 import { Link } from 'react-router-dom';
+import Social from './Social';
+
 
 import {
     FaEnvelope,
@@ -15,6 +17,8 @@ import {
     FaFacebook,
     FaTwitter,
     FaGithub,
+    FaWhatsapp,
+    FaYoutube,
     FaLinkedin,
 } from 'react-icons/fa';
 
@@ -106,65 +110,6 @@ const Footer = () => {
                             </div>
                         </Container>
                     </Col>
-
-
-
-
-
-                    {/* <Col md={6} lg={3} className="mt-5 mt-md-0">
-                        <Container style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                            <div style={{ color: 'white' }}>
-                                <b>Quick Links</b>
-                            </div>
-                            <br />
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/" className="footer-link"
-
-                                >
-                                    Home
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/about" className="footer-link"
-
-                                >
-                                    About
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/skills" className="footer-link"
-
-
-
-                                >
-                                    Skills
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/experience" className="footer-link"
-
-
-                                >
-                                    Experience
-                                </Link>
-                            </div>
-                            <div>
-                                <Link style={{ ...linkStyle }} to="/education" className="footer-link"
-                                // activeClassName="active"
-                                // onClick={() => handleTabClick('home')}
-
-                                >
-                                    Education
-                                </Link>
-                            </div>
-                        </Container>
-                    </Col> */}
-
-
-
-
-
-
                     <Col md={6} lg={3} className="mt-5 mt-md-0">
                         <Container style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
                             <div style={{ color: 'white' }}>
@@ -175,11 +120,49 @@ const Footer = () => {
                             <br />
                             <br />
                             <div>
-                                <FaEnvelope size={30} style={{ ...iconStyle }} className="footer-icon" /> <FaLinkedin size={30} style={{ ...iconStyle }} className="footer-icon" /> <FaInstagram size={30} style={{ ...iconStyle }} className="footer-icon" /> <FaTwitter size={30} style={{ ...iconStyle }} className="footer-icon" />
-                                {/* <FaFacebook size={30} style={{ ...iconStyle }} className="footer-icon" /> */}
 
+
+                                <div>
+                                    <a href="mailto:lnverma95@gmail.com" className="footer-icon">
+                                        <FaEnvelope size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/lnverma09/" className="footer-icon">
+                                        <FaLinkedin size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://www.instagram.com/mr._.ln" className="footer-icon">
+                                        <FaInstagram size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://www.x.com/Lnverma9977553" className="footer-icon">
+                                        <FaTwitter size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://wa.me/9129570336" className="footer-icon">
+                                        <FaWhatsapp size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <br />
+                                    <br />
+
+                                    <a href="https://www.facebook.com/lakshminarayanverma.lnverma" className="footer-icon">
+                                        <FaFacebook size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://github.com/lnverma15" className="footer-icon">
+                                        <FaGithub size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                    <a href="https://www.youtube.com/@lnverma6831" className="footer-icon">
+                                        <FaYoutube size={30} style={{ ...iconStyle }} />
+                                    </a>
+                                </div>
                             </div>
                         </Container>
+                    </Col>
+                    {/* <Col>
+
+                    </Col> */}
+                    <Col>
+                        <img
+                            src="/Lnverma.gif"
+                            alt="Lnverma Logo"
+                            style={{ width: '200px', height: '200px', marginTop: '50px' }} // Adjust the values as needed
+                        />
                     </Col>
                 </Row>
                 <br /><br />
@@ -193,10 +176,7 @@ const Footer = () => {
                         </i>
 
                     </div>
-                    {/* <div style={{ color: 'white', display: 'flex', alignItems: 'center' }}>
-                        <p style={{ margin: '40px' }}>© {new Date().getFullYear()} All rights reserved.</p>
-                        <i style={{ marginLeft: '60px' }}>**Created by @LNVERMA**</i>
-                    </div> */}
+
 
                 </center>
             </footer>
