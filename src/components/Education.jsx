@@ -45,7 +45,8 @@ function Education(props) {
                   </div>
                   <div className="card-text">
                     <Card.Title className="card-title-styles">{education.cardTitle}</Card.Title>
-                    <Card.Subtitle className="card-subtitle-styles mb-2 text-muted">
+                    <br />
+                    <Card.Subtitle className="card-title-styles">
                       {education.cardSubtitle}
                     </Card.Subtitle>
                     <Card.Text className="card-text-styles">{education.title}</Card.Text>

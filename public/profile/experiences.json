@@ -1,17 +1,17 @@
 {
-    "experiences": [
-        {
-            "title": "Software Engineer",
-            "subtitle": "Accord Global Technology Solutions",
-            "workType": "Full-time",
-            "workDescription": [
-                "As a proficient React Developer:",
-                "- Developed and maintained front-end components using React, ensuring a responsive and user-friendly interface.",
-                "- Collaborated with cross-functional teams to design and implement new features, enhancing overall product functionality.",
-                "- Optimized performance by identifying bottlenecks and implementing solutions, resulting in a significant 50% speed improvement.",
-                "- Ensured code quality through thorough testing and code reviews, contributing to a stable and reliable application."
-            ],
-            "dateText": "08/2022 – Present"
-        }
-    ]
+  "experiences": [
+    {
+      "title": "Software Engineer",
+      "subtitle": "Alten Global Technologies, Bangalore",
+      "workType": "Full-time",
+      "workDescription": [
+        "As a proficient React Developer:",
+        "- Developed and maintained front-end components using React, ensuring a responsive and user-friendly interface.",
+        "- Collaborated with cross-functional teams to design and implement new features, enhancing overall product functionality.",
+        "- Optimized performance by identifying bottlenecks and implementing solutions, resulting in a significant 50% speed improvement.",
+        "- Ensured code quality through thorough testing and code reviews, contributing to a stable and reliable application."
+      ],
+      "dateText": "08/2022 – Present"
+    }
+  ]
 }
