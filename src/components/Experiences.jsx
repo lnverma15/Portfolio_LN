@@ -25,7 +25,7 @@ function Experiences(props) {
       <br /><br />
       <center>
         <h3>
-          Experiance
+          Experience
         </h3>
       </center>
       <br /><br />
@@ -41,7 +41,8 @@ function Experiences(props) {
                   </div>
                   <div className="card-text">
                     <Card.Title className="card-title-styles">{experience.title}</Card.Title>
-                    <Card.Subtitle className="card-subtitle-styles mb-2 text-muted">
+                    <br />
+                    <Card.Subtitle className="card-title-styles">
                       {experience.subtitle}
                     </Card.Subtitle>
                     <Card.Text className="card-text-styles">{experience.workType}</Card.Text>
