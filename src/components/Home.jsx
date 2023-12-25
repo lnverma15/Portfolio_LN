@@ -1,23 +1,67 @@
 
 import React, { useState, useEffect } from 'react';
-import { Container, Row, Col, Form, Button, Carousel } from 'react-bootstrap';
-
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import Typewriter from 'typewriter-effect';
 import endpoints from '../constants/endpoints';
 import Social from './Social';
 import FallbackSpinner from './FallbackSpinner';
-// import Footer from './Footer';
-// import Header from './Header';
 import '../css/home.css';
+
+
+// Define keyframes for animation
+const slideBackground = {
+  '0%': { backgroundPosition: '0 0' },
+  '100%': { backgroundPosition: '100% 0' },
+};
+
+// Define keyframes for floating color animation
+const floatColor = {
+  '0%': { color: 'blue', transform: 'translateY(0)' },
+  '50%': { color: 'red', transform: 'translateY(-10px)' },
+  '100%': { color: 'blue', transform: 'translateY(0)' },
+};
+
 
 const styles = {
   container: {
-    display: 'flex',
-    flexDirection: 'column',
+    position: 'relative',
+    width: '100%',
     minHeight: '100vh',
+    overflow: 'hidden',
+  },
+
+
+  backgroundImage: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    width: '100%',
+    height: '100%',
+    // backgroundImage: `url("images/graphic.jpg")`, // Replace with your image path
+    backgroundImage: `url("images/lapp.jpg")`, // Replace with your image path
+    backgroundSize: 'cover',
+    // opacity: 0.8,
+    zIndex: -1,
+    animationName: slideBackground, // Apply the animation keyframes
+    animationDuration: '2s',
+    animationTimingFunction: 'linear',
+    animationIterationCount: 'infinite',
+  },
+
+  floatingText: {
+    position: 'absolute',
+    top: '50%',
+    left: '50%',
+    transform: 'translate(-50%, -50%)', // Center the text
+    animationName: floatColor, // Apply the floating color animation keyframes
+    animationDuration: '1s',
+    animationTimingFunction: 'ease-in-out',
+    animationIterationCount: 'infinite',
+    fontSize: '24px', // Adjust text size as needed
+    fontWeight: 'bold', // Adjust text weight as needed
+    margin: 0,
   },
   content: {
-    flex: 1,
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
@@ -25,34 +69,19 @@ const styles = {
   },
   nameStyle: {
     fontSize: '1.5em',
-    fontStyle: 'italic'
-
+    fontStyle: 'italic',
   },
   inlineChild: {
     display: 'inline-block',
     fontSize: '1em',
-    fontStyle: 'italic'
-
-  },
-  imageStyle: {
-    maxWidth: '100%',
-    height: '400px',
+    fontStyle: 'italic',
   },
   phoneContent: {
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
   },
-  phoneImageStyle: {
-    width: '100%',
-    height: 'auto',
-    marginBottom: '20px',
-  },
 };
-
-
-
-
 
 function Home() {
   const [data, setData] = useState(null);
@@ -66,13 +95,10 @@ function Home() {
       .catch((err) => err);
   }, []);
 
-
-
   const images = [
     'images/fox family-pana.svg',
     'images/avocado tree-cuate.svg',
     'images/cherry tree-amico.svg',
-
     'images/1.jpg',
     'images/2.jpg',
     'images/3.jpg',
@@ -85,23 +111,16 @@ function Home() {
     'images/10.jpg',
     'images/11.jpg',
     'images/12.jpg',
-
   ];
 
   return (
     <div style={styles.container}>
-      {data ? (
-        <div style={styles.content}>
-          {window.innerWidth < 576 ? (
+      {/* <div style={styles.backgroundImage}></div> */}
+      <div style={styles.content}>
+        {data ? (
+          window.innerWidth < 576 ? (
             // Content for phone screens
             <div style={styles.phoneContent}>
-              {/* <div>
-                <img
-                  src="images/home.jpg"
-                  alt="Website Logo"
-                  style={styles.phoneImageStyle}
-                />
-              </div> */}
               <div>
                 <h1 style={styles.nameStyle}>{data?.greetings}</h1>
                 <h1 style={styles.nameStyle}>{data?.name}</h1>
@@ -121,12 +140,10 @@ function Home() {
           ) : (
             // Content for larger screens
             <Container>
-
               <Row>
                 <Col md={6} lg={6}>
                   <Row style={{ marginTop: '130px' }}>
                     <div>
-
                       <h5 style={styles.nameStyle}>{data?.greetings}</h5>
                       <h2 style={styles.nameStyle}>{data?.name}</h2>
                       <div style={{ flexDirection: 'row' }}>
@@ -146,14 +163,7 @@ function Home() {
                     </div>
                   </Row>
                 </Col>
-                <Col md={6} lg={6} className="image-col">
-                  {/* <img
-                    src="images/fox family-pana.svg"
-                    // src="images/home.jpg"
-                    alt="Website Logo"
-                    style={styles.imageStyle}
-                  /> */}
-
+                <Col md={6} lg={6} className="image-col" style={{ marginTop: '100px' }}>
                   <Carousel className="contact-carousel">
                     {images.map((image, index) => (
                       <Carousel.Item key={index}>
@@ -161,25 +171,15 @@ function Home() {
                       </Carousel.Item>
                     ))}
                   </Carousel>
-
-
-
                 </Col>
               </Row>
-              <br />
-              <br />
-              <br />
-              <br />
-              <br />
-              {/* Add more content rows here */}
             </Container>
-          )}
-        </div>
-      ) : (
-        // Display spinner while fetching data
-        <FallbackSpinner />
-      )}
-      {/* <Footer /> */}
+          )
+        ) : (
+          // Display spinner while fetching data
+          <FallbackSpinner />
+        )}
+      </div>
     </div>
   );
 }

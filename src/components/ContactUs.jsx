@@ -24,27 +24,72 @@ const ContactUs = () => {
 
   ];
 
-  const handleSubmit = (e) => {
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+
+
+  //   if (!fullName || !email || !phone || !address || !education) {
+  //     setError('Please fill in all fields');
+  //     return;
+  //   }
+
+  //   toast.info(`Message sent Successfully`);
+
+  //   // Perform further actions with the form data
+  //   // e.g., send data to backend, display success message, etc.
+
+  //   // Reset form fields
+  //   setFullName('');
+  //   setEmail('');
+  //   setPhone('');
+  //   setAddress('');
+  //   setEducation('');
+  //   setError('');
+  // };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
-
+    // Form validation
     if (!fullName || !email || !phone || !address || !education) {
       setError('Please fill in all fields');
       return;
     }
 
-    toast.info(`Message sent Successfully`);
+    // Email validation (optional)
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+      setError('Please enter a valid email address');
+      return;
+    }
 
-    // Perform further actions with the form data
-    // e.g., send data to backend, display success message, etc.
-
-    // Reset form fields
-    setFullName('');
-    setEmail('');
-    setPhone('');
-    setAddress('');
-    setEducation('');
+    // Reset previous errors
     setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ fullName, email, phone, address, education }),
+      });
+
+      if (response.ok) {
+        toast.success('Message sent successfully');
+        // Reset form fields
+        setFullName('');
+        setEmail('');
+        setPhone('');
+        setAddress('');
+        setEducation('');
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error(error);
+      toast.error('Error sending message');
+    }
   };
 
 
