@@ -43,14 +43,17 @@ function Education(props) {
                   <div className="card-image">
                     <Image src="images/ui1.jpg" alt="Website Logo" fluid className="img-style" />
                   </div>
-                  <div className="card-text">
+                
+                  <div className="card-text-education">
                     <Card.Title className="card-title-styles">{education.cardTitle}</Card.Title>
+                    <br />
+                    <br />
                     <br />
                     <Card.Subtitle className="card-title-styles">
                       {education.cardSubtitle}
                     </Card.Subtitle>
-                    <Card.Text className="card-text-styles">{education.title}</Card.Text>
-                    <Card.Text className="card-text-styles">{education.status}</Card.Text>
+                    {/* <Card.Text className="card-text-styles">{education.title}</Card.Text> */}
+                    {/* <Card.Text className="card-text-styles">{education.status}</Card.Text> */}
                   </div>
                 </Card>
               </Col>

@@ -144,8 +144,10 @@ function Home() {
                 <Col md={6} lg={6}>
                   <Row style={{ marginTop: '130px' }}>
                     <div>
-                      <h5 style={styles.nameStyle}>{data?.greetings}</h5>
-                      <h2 style={styles.nameStyle}>{data?.name}</h2>
+                      <h5 >{data?.greetings}</h5>
+                      <h6  >{data?.name}</h6>
+                      <h6 >{data?.description}</h6>
+                       <h7>{data?.cta}</h7>
                       <div style={{ flexDirection: 'row' }}>
                         <h2 style={styles.inlineChild}>I&apos;m&nbsp;</h2>
                         <Typewriter

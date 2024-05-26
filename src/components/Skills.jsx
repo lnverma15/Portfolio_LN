@@ -150,6 +150,9 @@ function Skills(props) {
       {/* Your Header component */}
       {data ? (
         <div className="section-content-container">
+          <br />
+          <br />
+          <br />
           <Container>
             {renderSkillsIntro(data.intro)}
             {data.skills?.map((category) => (

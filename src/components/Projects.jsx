@@ -44,7 +44,7 @@ const Projects = (props) => {
       </div>
       <br /><br /><br />
 
-      <Container style={{ ...styles.containerStyle, backgroundColor: 'white' }}>
+      <Container style={{ ...styles.containerStyle, backgroundColor: 'none' }}>
         <Row xs={1} sm={1} md={2} lg={3} className="g-4">
           {data && data.projects?.slice(0, numberOfItems).map((project) => (
             <ProjectCard key={project.title} project={project} />

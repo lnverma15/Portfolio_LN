@@ -33,6 +33,13 @@
     flex: 0 0 40%;
     padding: 20px;
     color: aliceblue;
+    margin-top: 30px;
+}
+.card-text-education {
+    flex: 0 0 40%;
+    padding: 20px;
+    color: aliceblue;
+    margin-top: 130px;
 }
 
 
