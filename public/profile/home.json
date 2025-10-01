@@ -1,17 +1,15 @@
-
-
 {
-    "greetings": "👋 Hi there, Welcome!",
-    "name": "I'm LN Verma, a Passionate Front-End Developer with 2 Years of Experience",
-    "description": "Expert in React JS, HTML5, CSS3, and JavaScript (ES6). Proficient in Full (MERN) Stack, including Node.js and Express.js as Backend Technologies and MongoDB, MySQL for Databases.",
-    "roles": [
-        "Versatile Frontend Developer...!",
-        "Innovative Freelancer...!",
-        "Creative Problem Solver...!",
-        "Tech Enthusiast and Explorer...!",
-        "UX/UI Advocate....!",
-        "MERN Stack Specialist...!"
-    ],
-    "quote": "“Code is like humor. When you have to explain it, it’s bad.” – Cory House",
-    "cta": "Explore my projects and let's build something amazing together!"
+  "greetings": "👋 Hi there, Welcome!",
+  "name": "I'm Lakshmi Narayan, a Passionate Front-End React Developer over 3 Years of Experience",
+  "description": "Expert in React JS, HTML5, CSS3, and JavaScript (ES6) & TypeScript. Proficient in Full (MERN) Stack, including Node.js and Express.js as Backend Technologies and MongoDB, MySQL for Databases.",
+  "roles": [
+    "Versatile Frontend Developer...!",
+    "Innovative Freelancer...!",
+    "Creative Problem Solver...!",
+    "Tech Enthusiast and Explorer...!",
+    "UX/UI Advocate....!",
+    "MERN Stack Specialist...!"
+  ],
+  "quote": "“Code is like humor. When you have to explain it, it’s bad.” – Cory House",
+  "cta": "Explore my projects and let's build something amazing together!"
 }
